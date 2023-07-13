@@ -1,12 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>{{title}}</title>
-</head>
-<body>
-{% block mainmenu %}
-<ul>
+<html lang="ru">
 
-</ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'club/css/reset.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'club/css/styles.css' %}" rel="stylesheet"/>
+</head>
+
+<body>
+<header class="header">
+    <div class="container header__inner">
+        <a class="logo" href="{% url 'home'%}">
+            <img class="logo__img" src="{% static 'club/images/logo.png' %}" alt="">
+        </a>
+        <a class="company__name" href="{% url 'home'%}">
+            line
+        </a>
+        <p class="yolo8">YOLOv8</p>
+    </div>
+</header>
+{% for c in club %}
+<p>{{c.address}}</p>
+{% endfor %}
+
+{% block content %}
+{% endblock %}
 </body>
+
 </html>

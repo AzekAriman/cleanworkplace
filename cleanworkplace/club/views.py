@@ -1,10 +1,13 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-menu = [{'title': "КОЛИЗЕЙ", 'url_name': 'about'},
-        {'title': "login", 'url_name': 'addpage'},
-        ]
+from club.models import Club
 
 
 def index(request):
-    return render(request, 'club/index.html')
+    club = Club.objects.all()
+    context = {
+        'club': club,
+        'title': 'Главная страница'
+    }
+    return render(request, 'club/index.html', context=context)

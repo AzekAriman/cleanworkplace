@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from club.models import *
+
+
+admin.register(Club)
+admin.register(Camera)
+admin.register(Picture)
