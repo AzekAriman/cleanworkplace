@@ -24,8 +24,8 @@ params = {
 headers = {
     "Accept": "image/*"
 }
-
-url = "http://45.138.163.92:7502/cameras/3/image"
+# 0 1 2 3 9 11 12 13 14 15
+url = "http://45.138.163.92:7502/cameras/0/image"
 username = "test"
 password = "Rtest3"
 

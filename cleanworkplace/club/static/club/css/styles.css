@@ -48,3 +48,8 @@ header {
     align-items: center;
     text-transform: uppercase;
 }
+
+/* left menu */
+.selected {
+    color: #df481a;
+}
