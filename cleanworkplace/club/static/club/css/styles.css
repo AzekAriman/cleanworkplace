@@ -100,3 +100,16 @@ header {
     margin-top: 10px;
     margin-left: 18px;
 }
+
+/* club */
+
+.posts {
+    padding-left: 25px;
+}
+/* 640 */
+.centered-image {
+    margin-top: 20px;
+    padding-left: 160px; 
+    width: 800px;
+    height: 360px;
+}

@@ -10,4 +10,4 @@ class CamerasAdmin(admin.ModelAdmin):
 
 admin.site.register(Club)
 admin.site.register(Camera, CamerasAdmin)
-admin.register(Picture)
+admin.site.register(Picture)

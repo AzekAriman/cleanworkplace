@@ -30,7 +30,8 @@ class Camera(models.Model):
         verbose_name_plural = 'камеры видеонаблюдения'
         ordering = ['club', 'ip']
 
+
 class Picture(models.Model):
-    photo = models.ImageField(upload_to="photos/%Y/%m/%d/")
+    photo = models.ImageField(upload_to="photos/")
     time = models.DateTimeField(auto_now_add=True)
     camera = models.ForeignKey(Camera, on_delete=models.CASCADE)
