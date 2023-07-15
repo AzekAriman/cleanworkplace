@@ -26,23 +26,21 @@
         <p class="yolo8">YOLOv8</p>
     </div>
 </header>
-<div class="container">
+<div class="container main">
     <div class="left__menu">
         <ul class="left__menu-list">
             {% for c in club %}
-                {% if c.pk == club_selected %}
-                <li class="left__menu-item selected">{{c.address}}</li>
-                {% else %}
-                <li class="left__menu-item"><a href="{{ c.get_absolute_url }}">{{c.address}}</a></li>
-                {% endif %}
+            {% if c.pk == club_selected %}
+            <li class="left__menu-item selected">{{c.address}}</li>
+            {% else %}
+            <li class="left__menu-item"><a href="{{ c.get_absolute_url }}">{{c.address}}</a></li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
     {% block content %}
     {% endblock %}
 </div>
-
-
 
 
 </body>

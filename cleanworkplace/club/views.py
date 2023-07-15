@@ -25,4 +25,4 @@ def show_club(request, club_id):
         'club_selected': club_id,
     }
 
-    return render(request, 'club/index.html', context=context)
+    return render(request, 'club/club.html', context=context)
