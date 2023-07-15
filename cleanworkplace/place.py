@@ -77,7 +77,7 @@ def get_image():
             print(counter)
         except Exception as e:
             traceback.print_exc()
-        time.sleep(30)
+        time.sleep(150)
 
 
 # # Запуск функции get_image каждые 3 минут

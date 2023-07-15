@@ -14,7 +14,7 @@ html {
 
 body {
     color: var(--text-color);
-    background: #3B4858;
+    background: #1A1C1E;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -109,7 +109,16 @@ header {
 /* 640 */
 .centered-image {
     margin-top: 20px;
-    padding-left: 160px; 
-    width: 800px;
+    width: 640px;
     height: 360px;
+}
+
+.post__item {
+    background-color: #3B4858;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 160px; 
+    padding: 20px;
+    width: 680px;
+    border-radius: 10px;
 }
