@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+import place
 from club.models import Club
 
 
@@ -18,7 +19,6 @@ def index(request):
 
 def show_club(request, club_id):
     club = Club.objects.all()
-
     context = {
         'club': club,
         'title': 'клубы',
