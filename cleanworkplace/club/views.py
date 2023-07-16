@@ -25,7 +25,7 @@ def index(request):
 
 def show_club(request, club_id):
     club = Club.objects.all()
-    pictures = Picture.objects.filter(camera__club_id=club_id)
+    pictures = Picture.objects.filter(camera__club_id=club_id).order_by('-time')
     context = {
         'club': club,
         'picture': pictures,
