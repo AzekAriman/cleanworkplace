@@ -1,6 +1,8 @@
 import os
 import traceback
 
+import set
+
 import requests
 from django.core.files import File
 from django.utils import timezone
@@ -11,7 +13,6 @@ import io
 import time
 from club.models import *
 
-camera = [0, 1, 2, 3, 9, 11, 12, 13, 14, 15]  # 1 , 2, 3, 9, 11, 12, 13, 14, 15
 counter = [0]
 
 
@@ -46,8 +47,8 @@ def get_image():
 
             for index, camera in enumerate(cameras):
                 url = f"http://45.138.163.92:7502/cameras/{camera.ip}/image"
-                username = "test"
-                password = "Rtest3"
+                username = set.username
+                password = set.password
 
                 response = requests.get(url, auth=HTTPDigestAuth(username, password), params=params, headers=headers)
 
@@ -78,11 +79,3 @@ def get_image():
         except Exception as e:
             traceback.print_exc()
         time.sleep(150)
-
-
-# # Запуск функции get_image каждые 3 минут
-# schedule.every(1).minutes.do(get_image)
-#
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
