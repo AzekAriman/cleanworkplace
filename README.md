@@ -1,4 +1,4 @@
-# Analyze the state of the user's workplace YOLO 8 Project For ITMO JUNIOR ML Contest
+# Analyze the state of the user's workplace YOLO 8 Project
 ## Описание
 Проект "Analyze the state of the user's workplace" для ITMO JUNIOR ML Contest представляет собой веб-приложение, разработанное для компьютерного клуба, которое подключено к системе видеонаблюдения. Главная цель приложения - обработка информации, полученной от камер, при помощи нейронной сети и отображение мест, которые не были убраны в течение 10 минут.
 
